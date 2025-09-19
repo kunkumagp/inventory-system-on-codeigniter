@@ -41,6 +41,7 @@ merge_feature_branch() {
         echo "Found uncommitted changes. Committing them as 'latest changes'..."
         git add -A || exit 1
         git commit -m "latest changes" || exit 1
+        git push -u origin $BRANCH_TO_MERGE || exit 1
     else
         echo "No uncommitted changes found."
     fi
