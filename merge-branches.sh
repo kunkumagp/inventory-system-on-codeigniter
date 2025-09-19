@@ -41,7 +41,6 @@ merge_feature_branch() {
         echo "Found uncommitted changes. Committing them as 'latest changes'..."
         git add -A || exit 1
         git commit -m "latest changes" || exit 1
-        git push -u origin $BRANCH_TO_MERGE || exit 1
     else
         echo "No uncommitted changes found."
     fi
@@ -62,6 +61,7 @@ merge_feature_branch() {
     sleep 1
 
     # Put your existing script logic here
+    git push -u origin $BRANCH_TO_MERGE || exit 1
     echo "Merging $BRANCH_TO_MERGE to $DEV_BRANCH..."
     git checkout $DEV_BRANCH || exit 1
     # git reset --soft $(git merge-base $DEV_BRANCH $DEV_BRANCH)
