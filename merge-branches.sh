@@ -85,45 +85,45 @@ merge_feature_branch() {
 
     echo "Merging $DEV_BRANCH into $MAIN_BRANCH..."
     
-    # # Wait for one second
-    # sleep 1
+    # Wait for one second
+    sleep 1
 
-    # # Merge dev branch into main branch
-    # echo "Switching to branch $MAIN_BRANCH..."
-    # git checkout $MAIN_BRANCH || exit 1
+    # Merge dev branch into main branch
+    echo "Switching to branch $MAIN_BRANCH..."
+    git checkout $MAIN_BRANCH || exit 1
 
-    # # Wait for one second
-    # sleep 1
+    # Wait for one second
+    sleep 1
 
-    # git merge --no-ff -m "$TAG_NAME" $DEV_BRANCH || exit 1
+    git merge --no-ff -m "$TAG_NAME" $DEV_BRANCH || exit 1
 
 
-    # echo "Pushing merged changes to remote $MAIN_BRANCH..."
-    # git push origin $MAIN_BRANCH || exit 1
+    echo "Pushing merged changes to remote $MAIN_BRANCH..."
+    git push origin $MAIN_BRANCH || exit 1
 
-    # # Wait for one second
-    # sleep 1
+    # Wait for one second
+    sleep 1
 
-    # echo "Creating a tag $TAG_NAME for the main branch..."
-    # git tag -a $TAG_NAME -m "Release version $TAG_NAME" || exit 1
+    echo "Creating a tag $TAG_NAME for the main branch..."
+    git tag -a $TAG_NAME -m "Release version $TAG_NAME" || exit 1
 
-    # echo "Pushing the tag $TAG_NAME to the remote repository..."
-    # git push origin $TAG_NAME || exit 1
+    echo "Pushing the tag $TAG_NAME to the remote repository..."
+    git push origin $TAG_NAME || exit 1
 
-    # # Wait for one second
-    # sleep 1
+    # Wait for one second
+    sleep 1
 
-    # # Optional: Delete the specified branch locally and remotely
-    # read -p "Do you want to delete the current branch? (y/n): " DELETE_BRANCH
-    # if [[ $DELETE_BRANCH == "y" ]]; then
-    #     echo "Deleting branch locally..."
-    #     git branch -d $(git rev-parse --abbrev-ref HEAD) || exit 1
+    # Optional: Delete the specified branch locally and remotely
+    read -p "Do you want to delete the current branch? (y/n): " DELETE_BRANCH
+    if [[ $DELETE_BRANCH == "y" ]]; then
+        echo "Deleting branch locally..."
+        git branch -d $(git rev-parse --abbrev-ref HEAD) || exit 1
 
-    #     echo "Deleting branch remotely..."
-    #     git push origin --delete $(git rev-parse --abbrev-ref HEAD) || exit 1
-    # fi
+        echo "Deleting branch remotely..."
+        git push origin --delete $(git rev-parse --abbrev-ref HEAD) || exit 1
+    fi
 
-    # echo "Merge process completed successfully!"
+    echo "Merge process completed successfully!"
 
     # ... rest of your existing code
     
