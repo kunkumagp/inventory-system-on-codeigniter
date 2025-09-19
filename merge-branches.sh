@@ -60,24 +60,6 @@ merge_feature_branch() {
     # Wait for one second
     sleep 1
 
-    # # Reset 'soft' to squash commits into one
-    # echo "Squashing commits into one..."
-    # git reset --soft $(git merge-base $BRANCH_TO_MERGE $DEV_BRANCH)
-    # # Wait for one second
-    # sleep 1
-    # git commit -m "Squashed commits before merging" || exit 1
-    # # Wait for one second
-    # sleep 1
-    # git push origin $BRANCH_TO_MERGE --force || exit 1
-    # # Wait for one second
-    # sleep 1
-    # echo "Branch $BRANCH_TO_MERGE is ready for merging."
-
-    # Wait for one second
-    sleep 1
-
-    
-
     # Put your existing script logic here
     echo "Merging $BRANCH_TO_MERGE to $DEV_BRANCH..."
     git checkout $DEV_BRANCH || exit 1
