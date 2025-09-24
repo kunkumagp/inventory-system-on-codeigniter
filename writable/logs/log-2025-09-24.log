@@ -1,0 +1,118 @@
+ERROR - 2025-09-24 06:42:41 --> Error connecting to the database: TypeError: mysqli::real_connect(): Argument #5 ($port) must be of type ?int, string given in /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory_syste...', '3306', '', 0)
+#1 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Commands/Database/ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#6 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#7 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#8 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: mysqli::real_connect(): Argument #5 ($port) must be of type ?int, string given in /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Commands/Database/ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+#4 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run(Array)
+#5 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:table', Array)
+#6 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#7 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#8 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2025-09-24 06:42:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: mysqli::real_connect(): Argument #5 ($port) must be of type ?int, string given
+[Method: CLI, Route: db:table]
+in SYSTEMPATH/Database/BaseConnection.php on line 465.
+ 1 SYSTEMPATH/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `inventory_system_db`')
+ 3 SYSTEMPATH/Commands/Database/ShowTableInfo.php(121): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\ShowTableInfo->run([])
+ 5 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('db:table', [])
+ 6 SYSTEMPATH/Boot.php(388): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2025-09-24 06:46:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory_syste...', 3306, '', 0)
+#1 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#10 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-09-24 06:47:01 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SELECT "NAME" F...')
+#4 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-09-24 06:47:29 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(419): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(614): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SELECT "NAME" F...')
+#4 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-09-24 06:53:17 --> mysqli_sql_exception: Duplicate key name 'sku' in /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:327
+Stack trace:
+#0 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/app/Database/Migrations/2025-09-24-064612_CreateProductsTable.php(62): CodeIgniter\Database\Forge->createTable('products')
+#5 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(876): App\Database\Migrations\CreateProductsTable->up()
+#6 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/vendor/codeigniter4/framework/system/Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/geethprasanna/Desktop/Projects/inventory-system-on-codeigniter/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
