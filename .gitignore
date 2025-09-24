@@ -1,0 +1,51 @@
+# CodeIgniter 4 .gitignore
+
+# Logs
+/writable/logs/
+!/writable/logs/index.html
+
+# Cache
+/writable/cache/
+!/writable/cache/index.html
+
+# Session
+/writable/session/
+!/writable/session/index.html
+
+# Uploads
+/writable/uploads/
+!/writable/uploads/index.html
+
+# DebugBar
+/writable/debugbar/
+!/writable/debugbar/index.html
+
+# Environment variables
+.env
+
+# Database
+/writable/database.db*
+
+# Composer
+/vendor/
+composer.lock
+
+# Node modules (if using)
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# AI Tools Folder (Personal Use)
+AI-Tools/
